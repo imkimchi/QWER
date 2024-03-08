@@ -21,7 +21,7 @@ const ImageSlideshow = () => {
   // }, [currentImageIndex])
 
   useEffect(() => {
-    fetch('http://localhost:3030/api/count')
+    fetch('/api/count')
       .then(response => response.json())
       .then(data => setImageDetails(data.imageFiles || []))  // Ensure imageDetails is initialized to an empty array
       .catch(error => console.error('Error fetching image details:', error));
